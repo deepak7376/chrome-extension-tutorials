@@ -86,3 +86,41 @@ The `chrome.tabs` API in Chrome extensions provides a wide range of functionalit
 2. **`chrome.tabs.TabStatus`**: Represents the status of a tab, such as 'loading', 'complete', etc.
 
 These are some of the main methods, events, and properties available in the `chrome.tabs` API. They allow developers to interact with and manipulate browser tabs in various ways within Chrome extensions.
+
+
+
+
+The `chrome.scripting` API is used in Chrome extensions to interact with content scripts, execute JavaScript or CSS within web pages, and modify web page behavior. Here are the main methods provided by the `chrome.scripting` API:
+
+### Methods:
+1. **`chrome.scripting.executeScript`**: Injects JavaScript code into a webpage.
+2. **`chrome.scripting.insertCSS`**: Injects CSS code into a webpage.
+
+These methods allow extensions to programmatically interact with the content of web pages by injecting scripts or stylesheets.
+
+### Events:
+There are no specific events associated with the `chrome.scripting` API. Instead, the execution of content scripts can trigger events in other parts of the extension, such as the background script or popup.
+
+### Usage:
+- **`chrome.scripting.executeScript`**: This method is commonly used to interact with the DOM of a webpage or modify its behavior. For example, an extension might use `executeScript` to add functionality to a webpage by injecting custom JavaScript code.
+- **`chrome.scripting.insertCSS`**: This method is used to apply custom styles to a webpage by injecting CSS code. It can be useful for enhancing the appearance or usability of a webpage through an extension.
+
+### Example:
+```javascript
+// Inject a content script into the currently active tab
+chrome.scripting.executeScript({
+  target: { tabId: tabId }, // Specify the target tab where the script will be injected
+  function: () => {
+    // Injected JavaScript code to modify the webpage
+    document.body.style.backgroundColor = "lightblue";
+  }
+});
+
+// Inject a CSS stylesheet into the currently active tab
+chrome.scripting.insertCSS({
+  target: { tabId: tabId }, // Specify the target tab where the CSS will be injected
+  files: ["styles.css"] // Specify the CSS file(s) to inject
+});
+```
+
+These methods enable extensions to interact with and modify the content of web pages, enhancing the browsing experience for users.
