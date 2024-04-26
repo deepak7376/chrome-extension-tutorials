@@ -51,3 +51,38 @@ As of my last update in January 2022, the `chrome.runtime` namespace in Chrome e
    - `onStartup`: Fired when Chrome is launched.
 
 These are some of the essential methods and events provided by `chrome.runtime`. There might be additional methods and events available depending on the Chrome version and the features supported by the extension platform. Always refer to the latest Chrome extension documentation for the most accurate and up-to-date information.
+
+
+
+The `chrome.tabs` API in Chrome extensions provides a wide range of functionalities for manipulating browser tabs and accessing their properties. Here's a list of some of the main methods, events, and properties available in the `chrome.tabs` API:
+
+### Methods:
+1. **`chrome.tabs.create`**: Creates a new browser tab.
+2. **`chrome.tabs.update`**: Updates the properties of a specific tab.
+3. **`chrome.tabs.get`**: Retrieves details about a specific tab.
+4. **`chrome.tabs.getCurrent`**: Retrieves details about the currently active tab in the current window.
+5. **`chrome.tabs.query`**: Retrieves details about one or more tabs that match specified criteria.
+6. **`chrome.tabs.remove`**: Closes one or more tabs.
+7. **`chrome.tabs.duplicate`**: Duplicates a tab.
+8. **`chrome.tabs.move`**: Moves one or more tabs to a new position within the current window or to a new window.
+9. **`chrome.tabs.reload`**: Reloads a specific tab or multiple tabs.
+10. **`chrome.tabs.executeScript`**: Injects JavaScript code into a tab.
+11. **`chrome.tabs.insertCSS`**: Injects CSS into a tab.
+12. **`chrome.tabs.detectLanguage`**: Detects the language of the content in a tab.
+
+### Events:
+1. **`chrome.tabs.onCreated`**: Fired when a new tab is created.
+2. **`chrome.tabs.onUpdated`**: Fired when a tab is updated, such as when its URL changes or when the page title changes.
+3. **`chrome.tabs.onActivated`**: Fired when the active tab in a window changes.
+4. **`chrome.tabs.onRemoved`**: Fired when a tab is closed.
+5. **`chrome.tabs.onReplaced`**: Fired when a tab is replaced with another tab due to prerendering or instant.
+6. **`chrome.tabs.onMoved`**: Fired when a tab is moved within a window.
+7. **`chrome.tabs.onDetached`**: Fired when a tab is detached from a window.
+8. **`chrome.tabs.onAttached`**: Fired when a tab is attached to a window.
+9. **`chrome.tabs.onHighlighted`**: Fired when the highlighted or selected tabs in a window changes.
+
+### Properties:
+1. **`chrome.tabs.Tab`**: Represents a browser tab.
+2. **`chrome.tabs.TabStatus`**: Represents the status of a tab, such as 'loading', 'complete', etc.
+
+These are some of the main methods, events, and properties available in the `chrome.tabs` API. They allow developers to interact with and manipulate browser tabs in various ways within Chrome extensions.
